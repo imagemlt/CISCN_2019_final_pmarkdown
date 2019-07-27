@@ -1,0 +1,8 @@
+version: "3"
+services:
+    web:    # 服务名
+        build: ./    # web服务 Dockerfile所在目录
+        ports:  # 容器中80端口映射到本机8233端口
+            - 8233:80
+        volumes:    # 目录挂载，题目开发完成可删掉
+            - ./src:/var/www/html

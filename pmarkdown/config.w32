@@ -1,0 +1,7 @@
+ARG_ENABLE('pmarkdown', 'pmarkdown support', 'no');
+
+if (PHP_PMARKDOWN != 'no') {
+	AC_DEFINE('HAVE_PMARKDOWN', 1, 'pmarkdown support enabled');
+
+	EXTENSION('pmarkdown', 'pmarkdown.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
